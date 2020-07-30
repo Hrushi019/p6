@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 import myapp01
+from myapp01 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sam/',views.sam,name="sample"),
+    #path('primmary suffix,include("appname.urls"))
     path('myapp1/',include("myapp01.urls")),
     
 ]
